@@ -17,7 +17,6 @@ function App() {
 	});
 	const [view, setView] = useState({
 		type: 'table',
-		hiddenFields: ['img_src'],
 		perPage: 10,
 		layout: {
 			primaryField: 'name',
