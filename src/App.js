@@ -15,15 +15,30 @@ function App() {
 		totalItems: 0,
 		totalPages: 0,
 	});
+	const defaultLayouts = {
+		table: {
+			layout: {
+				primaryField: 'name',
+			},
+		},
+		grid: {
+			layout: {
+				primaryField: 'name',
+				mediaField: 'img_src',
+				badgeFields: ['province'],
+			},
+		},
+		list: {
+			layout: {
+				primaryField: 'name',
+				mediaField: 'img_src',
+			},
+		}
+	};
 	const [view, setView] = useState({
 		type: 'table',
 		perPage: 10,
-		layout: {
-			primaryField: 'name',
-			mediaField: 'img_src',
-			badgeFields: ['province'],
-			columnFields: [],
-		},
+		layout: defaultLayouts.table.layout,
 	});
 
 	const fields = [
@@ -69,6 +84,7 @@ function App() {
 			fields={fields}
 			view={view}
 			onChangeView={onChangeView}
+			defaultLayouts={defaultLayouts}
 			paginationInfo={paginationInfo}
 		/>
 	);
