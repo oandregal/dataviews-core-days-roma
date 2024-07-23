@@ -15,17 +15,30 @@ function App() {
 		totalItems: 0,
 		totalPages: 0,
 	});
+	const defaultLayouts = {
+		table: {
+			layout: {
+				primaryField: 'name',
+			},
+		},
+		grid: {
+			layout: {
+				primaryField: 'name',
+				mediaField: 'img_src',
+				badgeFields: ['province'],
+			},
+		},
+		list: {
+			layout: {
+				primaryField: 'name',
+				mediaField: 'img_src',
+			},
+		}
+	};
 	const [view, setView] = useState({
 		type: 'table',
-		hiddenFields: ['img_src'],
 		perPage: 10,
-		layout: {
-			primaryField: 'name',
-			mediaField: 'img_src',
-			badgeFields: ['province'],
-			columnFields: [],
-		},
-		filters: [],
+		layout: defaultLayouts.table.layout,
 	});
 
 	const fields = [
@@ -50,13 +63,11 @@ function App() {
 			id: 'population',
 			header: 'Population',
 			render: ({ item }) => formatNumber(item.population),
-			enableSorting: false, // filterSortAndPaginate cannot sort by number types yet.
 		},
 		{
 			id: 'km_2',
 			header: 'Area (km²)',
 			render: ({ item }) => formatNumber(item.km_2),
-			enableSorting: false, // filterSortAndPaginate cannot sort by number types yet.
 		}
 	];
 
@@ -73,6 +84,7 @@ function App() {
 			fields={fields}
 			view={view}
 			onChangeView={onChangeView}
+			defaultLayouts={defaultLayouts}
 			paginationInfo={paginationInfo}
 		/>
 	);
