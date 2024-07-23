@@ -24,7 +24,6 @@ function App() {
 			badgeFields: ['province'],
 			columnFields: [],
 		},
-		filters: [],
 	});
 
 	const fields = [
