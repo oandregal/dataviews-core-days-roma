@@ -15,8 +15,8 @@ npm install
 npm start
 ```
 
-Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Runs the app in the development mode. Open [http://localhost:5173](http://localhost:5173) to view it in your browser.
 
 ## Coda
 
-This demo has been bootstrapped with [Create React App](https://github.com/facebook/create-react-app) for demonstration purposes. It favors educational code, it's not production ready.
+This demo has been bootstrapped with [Vite](https://vite.dev) for demonstration purposes. It favors educational code, it's not production ready.

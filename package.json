@@ -6,8 +6,7 @@
     "@wordpress/components": "^28.2.0",
     "@wordpress/dataviews": "^4.7.0",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-scripts": "5.0.1"
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@types/react": "^18.3.12",
@@ -17,29 +16,8 @@
     "vite": "^5.4.10"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "eject": "react-scripts eject",
-
-    "vite:dev": "vite",
-    "vite:build": "tsc -b && vite build",
-    "vite:preview": "vite preview"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "start": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview"
   }
 }
